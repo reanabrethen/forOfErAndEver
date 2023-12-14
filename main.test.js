@@ -2,6 +2,105 @@
  * YOUR CODE HERE *
  ******************/
 
+const addAll = function(arr1){
+  //adding everything together
+let total = 0
+  
+//looping through
+  for(let num of arr1){
+    // total = total + num
+    total += num
+  }
+  //return sum
+  return total
+}
+
+
+const countSpaces = function(str1){
+  let counter = 0
+  for(let char of str1){
+    if(char === " "){
+      counter++
+    }
+  }
+return counter
+}
+
+
+const countTrues = function(arr2){
+  let trues = 0
+  for(let boolean of arr2){
+    if(boolean === true){
+      trues ++
+    }
+  }return trues
+}
+
+
+const makeFriendly = function(paragraph){
+  let str = ""
+  for(let char of paragraph){
+   if(char !== "."){
+   str = str + char
+  }else {
+    str = str + "!"
+  }
+}return str
+}
+
+
+const cubeAll = function(nums1){
+  let total = []
+  for(let i of nums1){
+    total.push(i*i*i)
+   } return total 
+}
+
+
+
+
+
+const addNoises = function(animals1){
+  let newArr = []
+
+  for(let sound of animals1){
+    newArr.push(sound)
+  return newArr
+}
+}
+
+
+//     const animals1 = ['Fido', 'Garfield', 'Sharp Tooth'];
+//     const withNoises1 = 
+// ['Fido says "Woof!"', 
+// 'Garfield says "Meow!"', 
+// 'Sharp Tooth says "ROWR."'];
+
+
+
+
+
+
+
+
+const womenOnly = function(arr4){
+  let str1 = ""
+  for(let names of arr4){
+    if(names !== ""){
+      str1 = []
+    }if(names.endWith("F")){
+      return str1
+}
+  }
+
+}
+const integersOnly = function(integers){
+  let 
+  
+  for(let nums of integers){
+  nums === integers % 2
+  } return nums
+}
 
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *
@@ -42,14 +141,6 @@ if (typeof integersOnly === 'undefined') {
 }
 
 const assert = require('assert');
-const {
-  addAll,
-  countSpaces,
-  countTrues,
-  makeFriendly,
-  cubeAll,
-  addNoises,
-} = require('./your-functions'); // Import your functions
 
 describe('addAll', () => {
   it(`adds all the numbers in the array`, () => {
