@@ -26,6 +26,19 @@ const countSpaces = function(str1){
 return counter
 }
 
+//PSEUDO CODE 
+//create counter variable
+//loop through the string
+//check if char is a " "
+// if is, add one to counter
+//after loop, return counter
+//return count 
+
+
+//let splitStr = str.split(" ")
+//splitStr = splitStr.join("")
+//return str.length = splitStr.length
+
 
 const countTrues = function(arr2){
   let trues = 0
@@ -35,6 +48,7 @@ const countTrues = function(arr2){
     }
   }return trues
 }
+
 
 
 const makeFriendly = function(paragraph){
@@ -48,6 +62,25 @@ const makeFriendly = function(paragraph){
 }return str
 }
 
+//check if char is a period line 51
+//KYLE's SOLUTION
+// const makeFriendly = function(str){
+//   let newStr = ""
+//   for(let char of str){
+//     if(char === '.'){
+//     newStr = newStr + '!'
+//   }else{
+//     newStr = newStr + char
+//   }
+// } return newStr;
+// }
+
+// let splitStr = str.split(" ")
+//splitStr = splitStr.join("")
+//return str.length - splitStr.length
+//what's being returned is the number of spaces that are removed 
+
+
 
 const cubeAll = function(nums1){
   let total = []
@@ -56,22 +89,44 @@ const cubeAll = function(nums1){
    } return total 
 }
 
+// DIFFERENT WAY TO WRITE
+// const cubeAll = function(arr){}
+// const cubedArr = []
+// for(let num of arr){
+//   cubedArr.push(num ** 3)    --> cubedArr.push(Math.pow(3))
+//   return cubedArr
+// }}
 
 
 
 
-const addNoises = function(animals1){
-  let newArr = []
+//MY ATTEMPT
+// const addNoises = function(animals1){
+//   let newArr = []
 
-  for(let sound of animals1){
-    newArr.push(sound)
-  return newArr
+//   for(let sound of animals1){
+//     newArr.push(sound)
+//   return newArr
+// }
+// }
+
+
+//correct way 
+const addNoises = function(arr){
+  noisyArr = []
+  for(let animal of arr){
+    if(animal === 'Fido' || animal === 'Rolph' || animal === 'Maisie'){
+      noisyArr.push(animal + ' says "Woof!"')
+  }else if(animal === 'Garfield' || animal === 'Heathcliff'){
+    noisyArr.push(animal + ' says "Meow!"')
+  }else if(animal === 'Barnie' || animal === 'Sharp Tooth'){
+    noisyArr.push(animal + ' says "ROWR."')
+  }
+} return noisyArr
 }
-}
 
-
-//     const animals1 = ['Fido', 'Garfield', 'Sharp Tooth'];
-//     const withNoises1 = 
+// const animals1 = ['Fido', 'Garfield', 'Sharp Tooth'];
+//const withNoises1 = 
 // ['Fido says "Woof!"', 
 // 'Garfield says "Meow!"', 
 // 'Sharp Tooth says "ROWR."'];
@@ -79,29 +134,45 @@ const addNoises = function(animals1){
 
 
 
-
-
-
-
-const womenOnly = function(arr4){
-  let str1 = ""
-  for(let names of arr4){
-    if(names !== ""){
-      str1 = []
-    }if(names.endWith("F")){
-      return str1
-}
-  }
-
-}
-const integersOnly = function(integers){
-  let 
-  
-  for(let nums of integers){
-  nums === integers % 2
-  } return nums
+// correct way
+const womenOnly = function(arr){
+  const women = []
+  for(let person of arr){
+    if(person[person.length - 1] === "F"){
+      women.push(person)
+    }
+  } return women 
 }
 
+//MY ATTEMPT
+// const womenOnly = function(arr4){
+//   for(let names of arr4){
+//     if(names !== ""){
+//       str1 = []
+//     }if(names.endWith("F")){
+//       return str1
+// }
+//   }
+
+// }
+
+
+// My syntax
+// const integersOnly = function(integers){
+//   for(let nums of integers){
+//   nums === integers % 2
+//   } return nums
+// }
+
+
+const integersOnly = function(arr){
+  const integers = []
+  for(let num of arr){
+    if(num % 1 === 0){
+      integers.push(num)
+    }
+  }return integers
+}
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *
  *********************************/
